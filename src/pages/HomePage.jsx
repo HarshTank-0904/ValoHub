@@ -52,7 +52,7 @@ function HomePage() {
             className="photo md:w-1/3 rounded hover:border border-[--rd]"
           >
             <img
-              src="../../public/valoAgents.jpg"
+              src="/valoAgents.jpg"
               alt="Valorant"
               className="w-full rounded-lg shadow-lg mt-5 cursor-pointer"
             />
