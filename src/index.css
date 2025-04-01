@@ -1,0 +1,62 @@
+
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rd: #ff6a77;   /* (255,70,84) */
+  --rd-dark: #ba3a46; /* (186,58,70) */
+  --blk: #111823; /* (17,24,35) */
+}
+.universal{
+  background-color: #111823;
+  color: white;
+  height: auto;
+}
+@font-face {
+  font-family: 'Valorant';
+  src: url('../assets/Valorant-Font.ttf') format('truetype');
+}
+
+
+.valo-font {
+  font-family: 'Valorant', sans-serif;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+
+}
+
+.border-rd {
+  border: 1px solid #ff4654 !important; /* Sets width, style, and color */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--blk); /* Matches dark theme */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rd); /* Matches primary red theme */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d40000; /* Slightly brighter red on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rd) var(--blk);
+}

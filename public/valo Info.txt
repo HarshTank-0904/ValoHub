@@ -1,0 +1,46 @@
+Valorant's competitive ranking system consists of multiple ranks and tiers that determine a player's skill level. Here's how it works:
+
+1. Ranks & Tiers
+There are 9 rank divisions, each with 3 tiers (except for Radiant):
+
+Iron (I, II, III)
+
+Bronze (I, II, III)
+
+Silver (I, II, III)
+
+Gold (I, II, III)
+
+Platinum (I, II, III)
+
+Diamond (I, II, III)
+
+Ascendant (I, II, III)
+
+Immortal (I, II, III)
+
+Radiant (Top Rank - No Tiers)
+
+2. Matchmaking Rating (MMR) & Rank Rating (RR)
+MMR is Riot's hidden ranking system that determines skill level.
+
+RR (Rank Rating) is what players see, ranging from 0-100 points per rank tier.
+
+Gaining 100 RR promotes you to the next tier, while dropping to 0 RR risks a demotion.
+
+3. Placement Matches & Rank Decay
+Players must complete 5 placement matches to get their initial rank.
+
+Ranks don’t decay over time but may soft reset at the start of new Acts.
+
+4. How to Rank Up?
+Winning matches and performing well individually increases your RR.
+
+Losing games results in RR loss.
+
+Performance matters more in lower ranks but becomes strictly win/loss-based in higher ranks (Ascendant & above).
+
+5. Leaderboards & Radiant Eligibility
+Only the top 500 players in a region can achieve Radiant rank.
+
+Immortal and Radiant players are displayed on the Regional Leaderboard
