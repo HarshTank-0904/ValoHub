@@ -1,12 +1,58 @@
-# React + Vite
+# Valo Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a web application built using **React and Vite** that provides detailed information about the game **Valorant**, including its latest version, updates, gameplay mechanics, and more.
 
-Currently, two official plugins are available:
+## Live Demo
+[Click here to view the live app](https://your-live-app-link.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Displays the latest Valorant version and update date
+- Provides an overview of the game, including agents, weapons, and game modes
+- Responsive UI for seamless experience across devices
 
-## Expanding the ESLint configuration
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **API:** Fetching data from [Valorant API](https://valorant-api.com)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repository.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd your-repository
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open your browser and go to `http://localhost:5173`
+
+## Deployment
+To deploy your app, you can use platforms like:
+- **Vercel**: `vercel deploy`
+- **Netlify**: `netlify deploy`
+- **GitHub Pages**: `npm run build` and deploy the `dist` folder
+
+## API Integration
+This app fetches data from the [Valorant API](https://valorant-api.com/v1/version) to display the latest version and update details.
+
+## Contributing
+Feel free to fork this repository and submit pull requests to improve the project.
+
+## License
+This project is licensed under the MIT License.
+
+---
+### Author
+Developed by [Your Name](https://github.com/yourusername)
+
+---
+If you have any suggestions or issues, please open an issue in the repository!
+
