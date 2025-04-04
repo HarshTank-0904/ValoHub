@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "../index.css";
 import CompetitiveTiers from "../components/CompetitiveTiers";
 
@@ -42,6 +44,42 @@ const InfoBox = ({ title, children }) => (
 );
 
 function Details() {
+  const [versionData, setVersionData] = useState({
+    version: "Loading...",
+    buildDate: "Loading..."
+  });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchVersionData = async () => {
+      try {
+        const response = await axios.get("https://valorant-api.com/v1/version");
+        const data = response.data.data;
+        setVersionData({
+          version: data.version,
+          buildDate: new Date(data.buildDate).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })
+        });
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching version data:", err);
+        setError(err);
+        setLoading(false);
+        // Fallback data in case API fails
+        setVersionData({
+          version: "10.06",
+          buildDate: "April 2024"
+        });
+      }
+    };
+
+    fetchVersionData();
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
       <h1 className="text-5xl font-extrabold text-red-400 text-center">
@@ -63,10 +101,10 @@ function Details() {
           <strong>Platform:</strong> Microsoft Windows
         </span>
         <span>
-          <strong>Current Patch:</strong> 10.06
+          <strong>Current Patch:</strong> {loading ? "Loading..." : error ? "10.06" : versionData.version}
         </span>
         <span>
-          <strong>Last Updated:</strong> April 2025
+          <strong>Last Updated:</strong> {loading ? "Loading..." : error ? "April 2024" : versionData.buildDate}
         </span>
       </div>
 
