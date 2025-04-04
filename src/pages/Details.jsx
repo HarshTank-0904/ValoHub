@@ -40,23 +40,27 @@ const CurrencyCard = ({ currency }) => {
 };
 
 function Details() {
-  const [versionData, setVersionData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [versionData, setVersionData] = useState({
+    version: "7.0",
+    buildDate: "2024-01-10"
+  });
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    axios
-      .get("https://valorant-api.com/v1/version")
-      .then((response) => {
-        setVersionData(response.data.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
+  // Remove the API call since it's not working
+  // useEffect(() => {
+  //   axios
+  //     .get("https://valorant-api.com/v1/version")
+  //     .then((response) => {
+  //       setVersionData(response.data.data);
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //       setError(error);
+  //       setLoading(false);
+  //     });
+  // }, []);
 
   if (loading)
     return <p className="min-h-screen text-center text-lg">Loading...</p>;
@@ -65,8 +69,8 @@ function Details() {
       <p className="min-h-screen text-center text-lg">Error fetching data.</p>
     );
 
-  const formattedVersion = versionData.version.split(".").slice(0, 2).join(".");
-  const formattedDate = versionData.buildDate.split("T")[0];
+  const formattedVersion = versionData.version;
+  const formattedDate = versionData.buildDate;
 
   return (
     <div className="container flex flex-col min-h-screen p-8 bg-gray-900 text-white">
