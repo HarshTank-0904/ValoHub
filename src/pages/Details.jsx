@@ -57,7 +57,7 @@ function Details() {
         const response = await axios.get("https://valorant-api.com/v1/version");
         const data = response.data.data;
         setVersionData({
-          version: data.version,
+          version: data.version.split('.').slice(0, 2).join('.'),
           buildDate: new Date(data.buildDate).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
@@ -101,10 +101,10 @@ function Details() {
           <strong>Platform:</strong> Microsoft Windows
         </span>
         <span>
-          <strong>Current Patch:</strong> {loading ? "Loading..." : error ? "10.06" : versionData.version}
+          <strong>Current Patch:</strong> {loading ? "Loading..." : error ? "8.0" : versionData.version}
         </span>
         <span>
-          <strong>Last Updated:</strong> {loading ? "Loading..." : error ? "April 2024" : versionData.buildDate}
+          <strong>Last Updated:</strong> {loading ? "Loading..." : error ? "January 2024" : versionData.buildDate}
         </span>
       </div>
 
