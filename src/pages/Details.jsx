@@ -8,18 +8,18 @@ const currencies = [
     name: "Valorant Points (VP)",
     description:
       "Purchased with real money; used to buy skins, Battle Passes, and other premium items.",
-    image: "../../public/vp.png",
+    image: "/vp.png",
   },
   {
     name: "Radianite Points (RP)",
     description: "Used to upgrade weapon skins; can be bought with VP.",
-    image: "../../public/rp.png",
+    image: "/rp.png",
   },
   {
     name: "Kingdom Credits (KC)",
     description:
       "Earned by playing matches; used to unlock agents and select cosmetics.",
-    image: "../../public/kc.png",
+    image: "/kc.png",
   },
 ];
 
