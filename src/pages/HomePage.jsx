@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function HomePage() {
   return (
     <>
@@ -10,12 +12,12 @@ function HomePage() {
           <div className="desc flex flex-col top-0 md:w-2/3 -mt-15 ">
             <h1 className="title valo-font text-3xl font-bold uppercase">
               What is valorant ?
-              <a
-                href="/details"
+              <Link
+                to="/details"
                 className="text-xs text-blue-400 hover:underline"
               >
                 (details)
-              </a>
+              </Link>
             </h1>
             <hr className="border-red-500 w-auto" />
             <p className="justify-center align-baseline">
@@ -32,8 +34,8 @@ function HomePage() {
               decision-making, and coordination to secure victory.
             </p>
           </div>
-          <a
-            href="/details"
+          <Link
+            to="/details"
             className="photo md:w-1/3 rounded hover:border border-[--rd] h-fit"
           >
             <img
@@ -41,14 +43,14 @@ function HomePage() {
               alt="Valorant"
               className="w-full rounded-lg shadow-lg mt-5 cursor-pointer"
             />
-          </a>
+          </Link>
         </div>
 
         {/*Agents*/}
 
         <div className="how2Play flex flex-col md:flex-row items-center gap-6 p-6">
-          <a
-            href="/agents"
+          <Link
+            to="/agents"
             className="photo md:w-1/3 rounded hover:border border-[--rd]"
           >
             <img
@@ -56,16 +58,16 @@ function HomePage() {
               alt="Valorant"
               className="w-full rounded-lg shadow-lg mt-5 cursor-pointer"
             />
-          </a>
+          </Link>
           <div className="desc flex flex-col top-0 md:w-2/3 -mt-15 ">
             <h1 className="title valo-font text-3xl font-bold uppercase">
               Agents{" "}
-              <a
-                href="/agents"
+              <Link
+                to="/agents"
                 className="text-xs text-blue-400 hover:underline"
               >
                 (details)
-              </a>
+              </Link>
             </h1>
             <hr className="border-red-500 w-auto" />
             <p className="justify-center align-baseline">
@@ -90,9 +92,9 @@ function HomePage() {
           <div className="desc flex flex-col top-0 md:w-2/3 -mt-4">
             <h1 className="title valo-font text-3xl font-bold uppercase">
               Maps{" "}
-              <a href="/maps" className="text-xs text-blue-400 hover:underline">
+              <Link to="/maps" className="text-xs text-blue-400 hover:underline">
                 (details)
-              </a>
+              </Link>
             </h1>
             <hr className="border-red-500 w-auto" />
             <p className="justify-center align-baseline">
@@ -110,13 +112,13 @@ function HomePage() {
 
           {/* Right Side - Clickable Image */}
           <div className="relative md:w-1/3 h-60 w-80 overflow-hidden rounded-lg">
-            <a href="/maps" className="block w-full h-full  ">
+            <Link to="/maps" className="block w-full h-full">
               <img
                 src="/valoMaps.jpeg"
                 alt="Valorant"
                 className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:border border-[--rd]"
               />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -124,24 +126,24 @@ function HomePage() {
 
         <div className="how2Play flex flex-col md:flex-row items-center gap-6 p-6">
           <div className="relative md:w-1/3 h-60 w-80 overflow-hidden rounded-lg">
-            <a href="/gamemodes" className="block w-full h-full  ">
+            <Link to="/gamemodes" className="block w-full h-full">
               <img
                 src="/valoMods.jpeg"
                 alt="Valorant"
                 className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:border border-[--rd]"
               />
-            </a>
+            </Link>
           </div>
 
           <div className="desc flex flex-col top-0 md:w-2/3 -mt-15 ">
             <h1 className="title valo-font text-3xl font-bold uppercase">
               Game Modes{" "}
-              <a
-                href="/gamemodes"
+              <Link
+                to="/gamemodes"
                 className="text-xs text-blue-400 hover:underline"
               >
                 (details)
-              </a>
+              </Link>
             </h1>
             <hr className="border-red-500 w-auto" />
             <p className="justify-center align-baseline">
@@ -170,12 +172,12 @@ function HomePage() {
           <div className="desc flex flex-col top-0 md:w-2/3 -mt-4">
             <h1 className="title valo-font text-3xl font-bold uppercase">
               Weapons{" "}
-              <a
-                href="/weapons"
+              <Link
+                to="/weapons"
                 className="text-xs text-blue-400 hover:underline"
               >
                 (details)
-              </a>
+              </Link>
             </h1>
             <hr className="border-red-500 w-auto" />
             <p className="justify-center align-baseline">
@@ -194,13 +196,13 @@ function HomePage() {
 
           {/* Right Side - Clickable Image */}
           <div className="relative md:w-1/3 h-60 w-80 overflow-hidden rounded-lg">
-            <a href="/weapons" className="block w-full h-full  ">
+            <Link to="/weapons" className="block w-full h-full">
               <img
                 src="/valoguns.jpeg"
                 alt="Valorant"
                 className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:border border-[--rd]"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
